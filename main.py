@@ -22,6 +22,8 @@ def find_and_click_image(image_path, region,flag):
         if flag:
             break
 
+    return 0
+
 def Move_Click(x,y):
     pyautogui.moveTo(x,y)
     time.sleep(0.2)
@@ -33,11 +35,11 @@ while True:
 
     Move_Click(2065,1267)
 
-    if find_and_click_image('2.png',(667, 454,1500,600),1):
+    if find_and_click_image('2.png',(667, 454,1300,600),1):
         Move_Click(1277, 1109)
         pyautogui.click()
         time.sleep(0.2)
-        if find_and_click_image('2.png',(667,454,1500,600,1)):
+        if find_and_click_image('2.png',(667,454,1300,600),1):
             print("Shortage of money!")
             exit()
 
