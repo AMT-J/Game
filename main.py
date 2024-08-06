@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import pyautogui
 import time
+import gc
 
 def find_and_click_image(image_path, region,flag):
     target_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -50,5 +51,7 @@ while True:
         pyautogui.click()
 
     Move_Click(1266, 1363)
+
+    gc.collect()
     
 
